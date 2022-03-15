@@ -1,4 +1,4 @@
-package br.com.softblue.java.generics;
+package br.com.tuyo.java.generics;
 
 public interface Bebida {
 

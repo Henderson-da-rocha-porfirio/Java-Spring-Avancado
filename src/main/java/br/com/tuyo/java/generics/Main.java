@@ -1,4 +1,4 @@
-package br.com.softblue.java.generics;
+package br.com.tuyo.java.generics;
 
 import java.util.ArrayList;
 import java.util.List;
