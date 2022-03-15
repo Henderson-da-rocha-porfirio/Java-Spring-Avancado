@@ -6,7 +6,7 @@ public class Main {
 		
 //		Buffer b = new Buffer();
 //		
-//		b.adicionar("a");
+//		b.adicionar("a"); -> Desses jeitos retornam de Objects e não de Generics.
 //		b.adicionar("b");
 //		b.adicionar("c");
 //		
@@ -16,7 +16,7 @@ public class Main {
 //		
 //		System.out.println(e1 + ", " + e2 + ", " + e3);
 		
-		Buffer<String> b = new Buffer<>();
+		Buffer<String> b = new Buffer<>(); // O Buffer pode ser parametrizado com qualquer Classe. Onde em Buffer está <T>.
 		
 		b.adicionar("a");
 		b.adicionar("b");
@@ -28,7 +28,7 @@ public class Main {
 		
 		System.out.println(e1 + ", " + e2 + ", " + e3);
 		
-		Buffer<Integer> b2 = new Buffer<>();
+		Buffer<Integer> b2 = new Buffer<>(); // O Buffer pode ser parametrizado com qualquer Classe. Onde em Buffer está <T>.
 		
 		b2.adicionar(10);
 		b2.adicionar(15);
