@@ -20,7 +20,7 @@ public class Main {
 //			System.out.println(s);
 //		}
 		
-		List<String> list = new ArrayList<>();
+		List<String> list = new ArrayList<>(); // Uso do Generics. Utilizando o Diamond <>: podendo ficar assim <> ou <String> ou <~>.
 		
 		list.add("abc");
 		list.add("def");
