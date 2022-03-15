@@ -13,7 +13,7 @@ public class Main {
 		//nomes.replaceAll(String::toUpperCase);
 		
 		//nomes.replaceAll(e -> Main.intercalate(e));
-		nomes.replaceAll(Main::intercalate);
+		nomes.replaceAll(Main::intercalate); // Para cada elemento, o método intercalate será chamado.Esse método intercala entre maiusculas e minúsculas.
 		
 		nomes.forEach(System.out::println);
 	}
