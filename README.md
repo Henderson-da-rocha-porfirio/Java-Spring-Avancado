@@ -17,3 +17,5 @@
 #### 4. Este número não muda para o objeto.
 #### 5. Por isso é importante definir manualmente o SerialVersionUID
 #### 6. Ter muito cuidado ao excluir atributos ou mudar os nomes dos atributos gravados inicialmente no SerialVersionUID. SE isso ocorrer, ele não gerará exceção mas dará erro, porque ele imprimirá null.
+## Serial Version Default:
+#### - private static final long serialVersionUID = 1L;
