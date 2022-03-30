@@ -1,4 +1,4 @@
-# ToString
+# ToString - Retorno em String dos dados do objeto
 
 Como usar o toString?
 Todas as classes que utilizamos no Java, sejam nossas ou de APIs da plataforma, descendem de uma única classe em comum: a classe Object. Ela disponibiliza métodos valiosos que são acessíveis a partir de qualquer outra classe, mesmo que esta não tenha sido declarada como subclasse de Object. Em outras palavras, nunca precisaremos escrever public class ClasseQualquer extends Object para que um objeto de tipo ClasseQualquer possa utilizar os métodos de Object.
