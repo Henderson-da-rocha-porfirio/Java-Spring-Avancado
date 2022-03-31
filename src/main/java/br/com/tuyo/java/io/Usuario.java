@@ -38,3 +38,6 @@ public class Usuario implements Serializable {
 		return "Usuario [id=" + id + ", nome=" + nome + ", endereco=" + endereco + "]";
 	}
 }
+
+// Usar transient para que a serialização não seja gravada.
+// Exemplo: private transient Bola bola; Bola não será gravada no arquivo.
