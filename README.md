@@ -43,10 +43,10 @@ public class MeuController {
   
   ## Ambos formatos são válidos e funcionam, tendo prós e contras.
 
-       ### A primeira solução é boa no caso de deixar claro tudo que está sendo injetado ou não, contudo é ruim, porque todas vezes precisamos fazer a anotação.
+        * A primeira solução é boa no caso de deixar claro tudo que está sendo injetado ou não, contudo é ruim, porque todas vezes precisamos fazer a anotação.
 
-        ### A segunda já resolve o problema da primeira, você evita ficar anotando tudo.
+        * A segunda já resolve o problema da primeira, você evita ficar anotando tudo.
 
-        ### A terceira foi a solução da galera esquecer de colocar a anotação no construtor, contudo pode não ser muito claro o que está acontecendo ali.
+        * A terceira foi a solução da galera esquecer de colocar a anotação no construtor, contudo pode não ser muito claro o que está acontecendo ali.
 
-        ### Um detalhe muito importante: o Spring só consegue injetar objetos que sejam Components dele.
+        * Um detalhe muito importante: o Spring só consegue injetar objetos que sejam Components dele.
