@@ -54,7 +54,7 @@ jerk
 para@heroes
 ````
 ````
-// Programa Java para demonstrar o funcionamento prático do split(regex, limit) com o limit baixo = 2.
+// Programa Java para demonstrar o funcionamento prático do split(regex, limit) com o limit alto = 5.
 public class Jerk {
 	public static void main(String args[])
 	{
@@ -66,6 +66,26 @@ public class Jerk {
 	}
 }
 ````
+#### Saída:
+````
+jerk
+para
+heroes
+````
+````
+// Programa Java para demonstrar o funcionamento prático do split(regex, limit) com o limit negativo = -2.
+public class Jerk {
+	public static void main(String args[])
+	{
+		String str = "jerk@para@heroes";
+		String[] arrOfStr = str.split("@", -2);
+
+		for (String a : arrOfStr)
+			System.out.println(a);
+	}
+}
+````
+
 #### Saída:
 ````
 jerk
