@@ -35,6 +35,7 @@ Output : {"016", "78967"}
 |s  |  	0|	{“je”, ””, ”@para@je”}|
 
 ### Exmplo 3 - praticando:
+#### A.
 ````
 // Programa Java para demonstrar o funcionamento prático do split(regex, limit) com o limit baixo = 2.
 public class Jerk {
@@ -53,6 +54,7 @@ public class Jerk {
 jerk
 para@heroes
 ````
+#### B.
 ````
 // Programa Java para demonstrar o funcionamento prático do split(regex, limit) com o limit alto = 5.
 public class Jerk {
@@ -72,6 +74,7 @@ jerk
 para
 heroes
 ````
+#### C.
 ````
 // Programa Java para demonstrar o funcionamento prático do split(regex, limit) com o limit negativo = -2.
 public class Jerk {
