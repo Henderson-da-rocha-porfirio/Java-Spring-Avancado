@@ -7,7 +7,7 @@ Regular Expression: -
 Output : {"016", "78967"}
 ```
 ## Duas Variantes do Método Split()
-### 1. Public String [ ] split ( String regex, int limit )
+## 1. Public String [ ] split ( String regex, int limit )
 
 #### Parâmetros:
 
@@ -16,7 +16,7 @@ Output : {"016", "78967"}
 ##### Return: Um array de strings é calculado dividindo a string dada.
 ##### Lança Exceção: PatternSyntaxException – se a sintaxe da expressão regular fornecida for inválida.  
 
-### 2. O parâmetro limit pode ter 3 valores: 
+### 1.1. O parâmetro limit pode ter 3 valores: 
 
 #### a. " limit > 0 " - Se este for o caso, então o padrão será aplicado no máximo limit -1 vezes, o comprimento do array resultante não será maior que " n ", e a última entrada do array resultante conterá todas as entradas além do último padrão correspondido.
 #### b. " limit < 0 " - Neste caso, o padrão será aplicado o maior número de vezes possível, e o array resultante pode ser de qualquer tamanho.
@@ -152,3 +152,4 @@ public class Jerk {
 jerk
 @para@heroe
 ````
+## 2 - 
