@@ -23,14 +23,13 @@ limit < 0 – Neste caso, o padrão será aplicado o maior número de vezes poss
 limit = 0 – Neste caso, o padrão será aplicado o maior número de vezes possível, o array resultante pode ser de qualquer tamanho e as strings vazias à direita serão descartadas.
 
 ## Exemplo 2:
-### jerk@for@heroes -> String que vai sofrer a divisão (split).
+### jerk@para@heroes -> String que vai sofrer a divisão (split).
 
 |Regex  |	Limit | 	Result|
 |:---:  |	:---: | 	:---:|
-|:---:  |	:---: | 	:---:|
-@	2	{“geekss”, ”for@geekss”}
-@	5	{“geekss”, ”for”, ”geekss”} 
-@	-2	{“geekss”, ”for”, ”geekss”}
-s    	5	{“geek”, ”“, “@for@geek”, “”, “”}
-s    	-2	{“geek”, ” “, ” “, “@for@geek”, “”, “”}
-s    	0	{“geek”, ””, ”@for@geek”}
+|@	| 2	|{“jerk”, ”para@heroes”}|
+|@	| 5	|{“jerk”, ”para”, ”heroes”}| 
+|@	|-2	|{“jerk”, ”para”, ”heroes”}|
+|s  | 	5	|{“je”, ”“, “@para@je”, “”, “”}|
+|s  |  	-2|	{“je”, ” “, ” “, “@para@je”, “”, “”}|
+|s  |  	0|	{“je”, ””, ”@para@je”}|
