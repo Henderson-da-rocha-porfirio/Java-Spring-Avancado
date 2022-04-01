@@ -157,7 +157,7 @@ jerk
 ##### regex – uma expressão regular delimitadora
 #### * Return: Um array de strings é calculado dividindo a string dada.
 #### * Lança Exceção: PatternSyntaxException – se a sintaxe da expressão regular fornecida for inválida.  
-##### 1.
+##### Exemplo 1.
 ````
 public class Jerks {
 	public static void main(String args[])
