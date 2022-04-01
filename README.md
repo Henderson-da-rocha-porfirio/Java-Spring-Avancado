@@ -9,12 +9,11 @@ Output : {"016", "78967"}
 ## Duas Variantes do Método Split()
 ## 1. Public String [ ] split ( String regex, int limit )
 
-#### Parâmetros:
-
+#### * Parâmetros:
 ##### regex – uma expressão regular delimitadora
 ##### Limit - o limite resultante
-##### Return: Um array de strings é calculado dividindo a string dada.
-##### Lança Exceção: PatternSyntaxException – se a sintaxe da expressão regular fornecida for inválida.  
+#### * Return: Um array de strings é calculado dividindo a string dada.
+#### * Lança Exceção: PatternSyntaxException – se a sintaxe da expressão regular fornecida for inválida.  
 
 ### 1.1. O parâmetro limit pode ter 3 valores: 
 
@@ -152,4 +151,9 @@ public class Jerk {
 jerk
 @para@heroe
 ````
-## 2 - 
+## 2 - public String[] split(String regex)
+### - Essa variante do método split usa uma expressão regular como parâmetro e quebra a string fornecida em torno das correspondências dessa expressão regular regex. Aqui, por padrão, o limite é 0.
+#### * Parâmetros:
+##### regex – uma expressão regular delimitadora
+#### * Return: Um array de strings é calculado dividindo a string dada.
+#### * Lança Exceção: PatternSyntaxException – se a sintaxe da expressão regular fornecida for inválida.  
