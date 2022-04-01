@@ -237,16 +237,44 @@ jerk
 public class Jerks {
 	public static void main(String args[])
 	{
-		String str = "jerkssss";
-		String[] arrOfStr = str.split("s");
+		String str = "JerksparaparaHeroespara ";
+		String[] arrOfStr = str.split("para");
 
 		for (String a : arrOfStr)
 			System.out.println(a);
 	}
 }
 
+
 ````
 #### Saída:
 ````
-jerk
+Jerks
+
+Heroes
+````
+##### Exemplo 6.
+````
+// using regular expressions
+public class Jerks {
+	public static void main(String args[])
+	{
+		String str = "palavra1, palavra2 palavra3@palavra4?palavra5.palavra6";
+		String[] arrOfStr = str.split("[, ?.@]+");
+
+		for (String a : arrOfStr)
+			System.out.println(a);
+	}
+}
+
+
+````
+#### Saída:
+````
+palavra1
+palavra2
+palavra3
+palavra4
+palavra5
+palavra6
 ````
