@@ -37,7 +37,7 @@ Output : {"016", "78967"}
 ### Exmplo 3 - praticando:
 ````
 // Programa Java para demonstrar o funcionamento prático do split(regex, limit) com o limit baixo = 2.
-public class GFG {
+public class Jerk {
 	public static void main(String args[])
 	{
 		String str = "jerk@para@heroes";
@@ -47,4 +47,28 @@ public class GFG {
 			System.out.println(a);
 	}
 }
+````
+#### Saída:
+````
+jerk
+para@heroes
+````
+````
+// Programa Java para demonstrar o funcionamento prático do split(regex, limit) com o limit baixo = 2.
+public class Jerk {
+	public static void main(String args[])
+	{
+		String str = "jerk@para@heroes";
+		String[] arrOfStr = str.split("@", 5);
+
+		for (String a : arrOfStr)
+			System.out.println(a);
+	}
+}
+````
+#### Saída:
+````
+jerk
+para
+heroes
 ````
