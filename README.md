@@ -25,14 +25,14 @@ Output : {"016", "78967"}
 ## Exemplo 2:
 ### jerk@para@heroes -> String que vai sofrer a divisão (split).
 
-|Regex  |	Limit | 	Result|
-|:---:  |	:---: | 	:---:|
-|@	| 2	|{“jerk”, ”para@heroes”}|
-|@	| 5	|{“jerk”, ”para”, ”heroes”}| 
-|@	|-2	|{“jerk”, ”para”, ”heroes”}|
-|s  | 	5	|{“je”, ”“, “@para@je”, “”, “”}|
-|s  |  	-2|	{“je”, ” “, ” “, “@para@je”, “”, “”}|
-|s  |  	0|	{“je”, ””, ”@para@je”}|
+| EXEMPLO:| Regex  |	Limit | 	Result|
+| :---:|:---:  |	:---: | 	:---:|
+| A |@	| 2	|{“jerk”, ”para@heroes”}|
+| B |@	| 5	|{“jerk”, ”para”, ”heroes”}| 
+| C |@	|-2	|{“jerk”, ”para”, ”heroes”}|
+| D |s  | 	5	|{“je”, ”“, “@para@je”, “”, “”}|
+| E |s  |  	-2|	{“je”, ” “, ” “, “@para@je”, “”, “”}|
+| F |s  |  	0|	{“je”, ””, ”@para@je”}|
 
 ### Exmplo 3 - praticando:
 #### A.
@@ -41,7 +41,7 @@ Output : {"016", "78967"}
 public class Jerk {
 	public static void main(String args[])
 	{
-		String str = "jerk@para@heroes";
+		String str = "jerks@para@heroes";
 		String[] arrOfStr = str.split("@", 2);
 
 		for (String a : arrOfStr)
@@ -60,7 +60,7 @@ para@heroes
 public class Jerk {
 	public static void main(String args[])
 	{
-		String str = "jerk@para@heroes";
+		String str = "jerks@para@heroes";
 		String[] arrOfStr = str.split("@", 5);
 
 		for (String a : arrOfStr)
@@ -80,7 +80,7 @@ heroes
 public class Jerk {
 	public static void main(String args[])
 	{
-		String str = "jerk@para@heroes";
+		String str = "jerks@para@heroes";
 		String[] arrOfStr = str.split("@", -2);
 
 		for (String a : arrOfStr)
@@ -94,4 +94,42 @@ public class Jerk {
 jerk
 para
 heroes
+````
+#### D.
+````
+// Programa Java para demonstrar o funcionamento prático do split(regex com "s", limit) com o limit alto = 5.
+public class Jerk {
+	public static void main(String args[])
+	{
+		String str = "jerks@para@heroes";
+		String[] arrOfStr = str.split("s", 5);
+
+		for (String a : arrOfStr)
+			System.out.println(a);
+	}
+}
+````
+#### Saída:
+````
+jerk
+@para@heroe
+````
+#### E.
+````
+// Programa Java para demonstrar o funcionamento prático do split(regex com "s", limit) com o limit negativo = -2
+public class Jerk {
+	public static void main(String args[])
+	{
+		String str = "jerks@para@heroes";
+		String[] arrOfStr = str.split("s", -2);
+
+		for (String a : arrOfStr)
+			System.out.println(a);
+	}
+}
+````
+#### Saída:
+````
+jerk
+@para@heroe
 ````
