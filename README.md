@@ -18,9 +18,9 @@ Output : {"016", "78967"}
 
 ### 2. O parâmetro limit pode ter 3 valores: 
 
-#### a. limit > 0 – Se este for o caso, então o padrão será aplicado no máximo limite-1 vezes, o comprimento do array resultante não será maior que n, e a última entrada do array resultante conterá todas as entradas além do último padrão correspondido.
-#### b. limit < 0 – Neste caso, o padrão será aplicado o maior número de vezes possível, e o array resultante pode ser de qualquer tamanho.
-#### c. limit = 0 – Neste caso, o padrão será aplicado o maior número de vezes possível, o array resultante pode ser de qualquer tamanho e as strings vazias à direita serão descartadas.
+#### a. " limit > 0 " - Se este for o caso, então o padrão será aplicado no máximo limit -1 vezes, o comprimento do array resultante não será maior que " n ", e a última entrada do array resultante conterá todas as entradas além do último padrão correspondido.
+#### b. " limit < 0 " - Neste caso, o padrão será aplicado o maior número de vezes possível, e o array resultante pode ser de qualquer tamanho.
+#### c. " limit = 0 " - Neste caso, o padrão será aplicado o maior número de vezes possível, o array resultante pode ser de qualquer tamanho e as strings vazias à direita serão descartadas.
 
 ## Exemplo 2:
 ### jerk@para@heroes -> String que vai sofrer a divisão (split).
