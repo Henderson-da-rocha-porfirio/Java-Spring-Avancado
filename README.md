@@ -136,3 +136,41 @@ Restart IntelliJ IDEA
 ````
 #### 5. Criar os repositoriós.
 #### 6. Criar os endpoints (controllers)
+#### 7. Fazer o teste no Postman
+##### - Exemplo:
+````
+localhost:8080/namoro/api/usuarios/registrar_usuarios
+````
+##### A. Selecionar o método POST
+##### B. Colocar a url conforme tenha sido criada ou como no exemplo abaixo.
+##### C. Vá em "Body" -> "raw" -> escolha JSON no lugar de "Text". Cole e corra:
+````
+{
+"usuarioNome": "Marco",
+"password": "12345",
+"idade": "30",
+"email": "marco@marco.com",
+"genero": "M",
+"teleNumero": "12985266325",
+"cidade": "São Paulo",
+"estado": "São Paulo",
+"pais": "Brasil"
+}
+````
+##### D. Resposta
+````
+{
+    "id": 1,
+    "usuarioNome": "Marco",
+    "password": "12345",
+    "idade": 30,
+    "email": "marco@marco.com",
+    "genero": "M",
+    "teleNumero": "12985266325",
+    "cidade": "São Paulo",
+    "estado": "São Paulo",
+    "pais": "Brasil",
+    "interesse": null
+}
+````
+##### - " interesse ": retornará null caso não tenha sido configurada ainda seu endpoint

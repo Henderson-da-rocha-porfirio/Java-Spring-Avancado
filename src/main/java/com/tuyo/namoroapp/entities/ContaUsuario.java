@@ -17,10 +17,13 @@ public class ContaUsuario {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
+    @Column(name="nome_usuario")
+    private String usuarioNome;
     private String password;
     private int idade;
     private String email;
     private String genero;
+    @Column(name="telefone_numero")
     private String teleNumero;
     private String cidade;
     private String estado;
