@@ -22,8 +22,9 @@ Os endpoints são interfaces entre a API e a aplicação consumidora.
 # E-NAMORO RESTful API
 ## Aplicativo de Namoro
 ### US = USER STORIES
-### Requerimentos - Os usuários poderão:
-#### - US 1º Permitir usuários se registrarem
+### Requerimentos
+### - O App permitirá que os usuários:
+### - US 1º Registrarem-se
 ##### - Para se considerarem registrados:
 ##### i. nome_usuario
 ##### ii. password
@@ -34,24 +35,60 @@ Os endpoints são interfaces entre a API e a aplicação consumidora.
 ##### vii. cidade
 ##### viii. estado
 ##### ix. país
-#### - US 2º Adicionarem seus interesses
+### - US 2º Adicionarem seus interesses
 ##### - Para terem as condições pós-registro de fazerem e incluírem:
 ##### i. permissao para dar likes
 ##### ii. permissao para dar dislikes
 ##### iii. hobbies
 ##### iv. perfil_url
 ##### v. sobre
-#### - US 3º Ver todos os outros usuários registrados
+### - US 3º Ver todos os outros usuários registrados
 ##### - Para terem o direito de:
 ##### i. permissao para ver outros usuários registrados
-#### - US 4º Marcar encontros com outros usuários
+### - US 4º Marcarem encontros com outros usuários
 ##### - Para achar encontros através de critérios como:
 ##### i. idade
 ##### ii. cidade
 ##### iii. estado
 ##### iv. país
 
-# E-NAMORO ENDPOINTS
+# NAMORO ENDPOINTS
+## Endpoints do Aplicativo de Namoro
+### US = USER STORIES
+### Requerimentos
+### - O App fará:
+### - 1º Endpoint = Registrar usuário
+````
+/namoro/api/usuarios/registrar_usuarios
+````
+### - 2º Endpoint = Atualizar Interesses
+````
+/namoro/api/interesses/update
+````
+### - 3º Endpoint = Deletar interesses
+````
+/namoro/api/interesses/delete/{interesseId}
+````
+### - 4º Endpoint = Dar Match (parceiro(a) que combine)
+````
+/namoro/api/usuarios/matches/{usuarioId}
+````
+### - Compreendendo:
+````
+/namoro/api/usuarios/registrar_usuarios
+````
+#### a. /namoro = é o contexto que deve ser passado em application.properties:
+````
+server.servlet.context-path=/namoro
+````
+#### b. /api = é o mapeamento principal do Controlador que deve ser configurado na Controller: ContaUsuarioController:
+````
+@RequestMapping("/api")
+````
+#### c. / = é o mapeamento do endpoint para a pagina de registros:
+````
+@PostMapping("/usuarios/registrar_usuarios") 
+````
 
 # LOMBOK
 ## É uma ferramenta Open-Source que remove toda a codificação padrão conhecida numa classe Java.
@@ -98,3 +135,4 @@ Restart IntelliJ IDEA
 @AllArgsConstructor
 ````
 #### 5. Criar os repositoriós.
+#### 6. Criar os endpoints (controllers)
