@@ -65,11 +65,15 @@ Os endpoints são interfaces entre a API e a aplicação consumidora.
 ````
 /namoro/api/interesses/update
 ````
-### - 3º Endpoint = Deletar interesses
+### - 3º Endpoint = buscar todos usuarios e interesses
 ````
-/namoro/api/interesses/delete/{interesseId}
+/namoro/api/interesses/get/todos
 ````
-### - 4º Endpoint = Dar Match (parceiro(a) que combine)
+### - 4º Endpoint = Deletar interesses
+````
+/namoro/api/usuarios/delete/{interesseId}
+````
+### - 5º Endpoint = Dar Match (parceiro(a) que combine)
 ````
 /namoro/api/usuarios/matches/{usuarioId}
 ````

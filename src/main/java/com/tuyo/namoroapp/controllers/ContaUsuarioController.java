@@ -5,10 +5,9 @@ import com.tuyo.namoroapp.entities.Interesse;
 import com.tuyo.namoroapp.repositories.ContaUsuarioRepo;
 import com.tuyo.namoroapp.repositories.InteresseRepo;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @RestController
 @RequestMapping("/api")
@@ -29,6 +28,15 @@ public class ContaUsuarioController {
         ContaUsuario contaUsuario = usuarioRepo.findById(interesse.getContaUsuarioId()).get();
         interesse.setContaUsuario(contaUsuario);
         return interesseRepo.save(interesse);
+    }
 
+    @GetMapping("/usuarios/get/todos")
+    public List<ContaUsuario> getUsuarios() {                                           // Vai realizar o fetching em todos os usuários. Para evitar looping infinito em Interesse. Verificar o JsonIgnore lá.
+        return usuarioRepo.findAll();
+    }
+
+    @DeleteMapping("/usuarios/delete/{interesseId}")
+    public void deleteInteresse(@PathVariable("interesseId") int id) {
+        interesseRepo.deleteById(id);                                                                        //@PathVariable = especifica o interesseId que é externo
     }
 }

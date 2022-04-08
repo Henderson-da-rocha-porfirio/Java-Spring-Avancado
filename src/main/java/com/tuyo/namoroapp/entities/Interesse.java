@@ -1,5 +1,6 @@
 package com.tuyo.namoroapp.entities;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -29,6 +30,7 @@ public class Interesse {
                                                                     // @Transient = este campo nunca será salvo no Database.
     @OneToOne
     @JoinColumn(name = "usuario_id")                    // Realizando o join
+    @JsonIgnore                                         // @JsonIgnore = evitar um loop infinito. Tem que ser na conta que será serializada: Interesse
     private ContaUsuario contaUsuario;                  //Definindo o relacionamento: Isso é onde queremos ter a FK, que é o usuário ID que aponta para o ID que referencia o ID de ContaUsuario que é usuario_id,
                                                         // sendo essa a FK de ContaUsuario dentro de Interesse.
 }                                                       // Configurar o JOIN em ContaUsuario
