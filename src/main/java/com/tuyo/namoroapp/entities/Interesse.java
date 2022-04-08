@@ -18,11 +18,15 @@ public class Interesse {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private String likes;
+    @Column(name="dislikes")
     private String disLikes;
     private String hobbies;
+    @Column(name="perfil_url")
     private String perfilUrl;
     private String sobre;
-
+    @Transient
+    private int contaUsuarioId;                                     // permite que apenas uma vez seja criada uma conta para cada usuário.
+                                                                    // @Transient = este campo nunca será salvo no Database.
     @OneToOne
     @JoinColumn(name = "usuario_id")                    // Realizando o join
     private ContaUsuario contaUsuario;                  //Definindo o relacionamento: Isso é onde queremos ter a FK, que é o usuário ID que aponta para o ID que referencia o ID de ContaUsuario que é usuario_id,
