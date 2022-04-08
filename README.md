@@ -39,3 +39,39 @@
 #### @AllArgsConstructor
 #### @EqualsAndHashCode
 #### @ToString
+#### @FieldNameConstants
+#### @RequiredArgsConstructor
+#### @Log, @Log4j, @Log4j2, @Slf4j, @XSlf4j, @CommonsLog, @JBossLog, @Flogger, @CustomLog
+#### @Data
+#### @Builder
+#### @SuperBuilder
+#### @Singular
+#### @Delegate
+#### @Value
+#### @Accessors
+#### @Wither
+#### @With
+#### @SneakyThrows
+#### @val
+#### @var
+#### experimental @var
+#### @UtilityClass
+### Usando o Lombok:
+#### 1. É necessário instalar a dependência no início da criação do projeto ou posteriormente no pom.xml
+#### 2. Para versões do Intellij acima de 2020.3, ele já vem instalado como plugin padrão. Não se fazendo necessária instalação.
+#### 3. Caso contrário:
+````
+Go to File > Settings > Plugins
+Click on Browse repositories...
+Search for Lombok Plugin
+Click on Install plugin
+Restart IntelliJ IDEA
+````
+#### 4. Introduzir as anotações nas entidades:
+````
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
+````
+#### 5. Criar os repositoriós.
