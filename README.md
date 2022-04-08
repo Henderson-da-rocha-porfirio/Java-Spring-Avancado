@@ -1,4 +1,25 @@
-# E-NAMORO RESTful API Backend - usando o Lombok
+# NAMOROAPP - UTILIZANDO LOMBOK
+### * ENDPOINT vs API
+#### - ENDPOINT: é a URL onde seu serviço pode ser acessado por uma aplicação cliente.
+````
+Endpoints podem existir sem APIs.
+````
+#### - API: é um conjunto de rotinas, protocolos e ferramentas para construir aplicações.
+````
+APIs também podem existir sem endpoints.
+````
+#### - Quando trabalham em conjunto:
+````
+Os endpoints são interfaces entre a API e a aplicação consumidora.
+````
+### - Exemplo:
+|  Client (C)  | :---: | API (A)|
+|:--:|   :---:     |   :---:     |
+| C | ENDPOINT  | A |
+|  C |ENDPOINT | A  |
+|  C |ENDPOINT | A  |
+
+# E-NAMORO RESTful API
 ## Aplicativo de Namoro
 ### US = USER STORIES
 ### Requerimentos - Os usuários poderão:
@@ -30,7 +51,9 @@
 ##### iii. estado
 ##### iv. país
 
-# Lombok
+# E-NAMORO ENDPOINTS
+
+# LOMBOK
 ## É uma ferramenta Open-Source que remove toda a codificação padrão conhecida numa classe Java.
 ### Anotações que diminuem consideravelmente o tamanho do código:
 #### @Getter
