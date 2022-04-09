@@ -178,3 +178,4 @@ localhost:8080/namoro/api/usuarios/registrar_usuarios
 }
 ````
 ##### - " interesse ": retornará null caso não tenha sido configurada ainda seu endpoint
+##### - Faça os testes similares com os outros endpoints.
