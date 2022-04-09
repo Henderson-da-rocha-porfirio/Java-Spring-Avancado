@@ -75,7 +75,7 @@ Os endpoints são interfaces entre a API e a aplicação consumidora.
 ````
 ### - 5º Endpoint = Dar Match (parceiro(a) que combine)
 ````
-/namoro/api/usuarios/matches/{usuarioId}
+/namoro/api/usuarios/matches/{id}
 ````
 ### - Compreendendo:
 ````

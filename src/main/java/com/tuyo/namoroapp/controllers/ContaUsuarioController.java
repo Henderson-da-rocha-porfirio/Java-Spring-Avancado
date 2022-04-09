@@ -36,7 +36,19 @@ public class ContaUsuarioController {
     }
 
     @DeleteMapping("/usuarios/delete/{interesseId}")
-    public void deleteInteresse(@PathVariable("interesseId") int id) {
-        interesseRepo.deleteById(id);                                                                        //@PathVariable = especifica o interesseId que é externo
+    public void deleteInteresse(@PathVariable("interesseId") int id) {       //@PathVariable = especifica o interesseId que está sendo passado no parâmetro
+        interesseRepo.deleteById(id);                                        // Vai realizar o fetching em todos os usuários. Para evitar looping infinito em Interesse. Verificar o JsonIgnore lá.
+    }
+
+
+    @GetMapping("/usuarios/matches/{id}")
+    public List<ContaUsuario> findMatches(@PathVariable("id")int id) {
+        ContaUsuario contaUsuario = usuarioRepo.findById(id).get();
+        return usuarioRepo.findMatches(
+                contaUsuario.getIdade(),
+                contaUsuario.getCidade(),
+                contaUsuario.getEstado(),
+                contaUsuario.getPais(),
+                contaUsuario.getId());
     }
 }
