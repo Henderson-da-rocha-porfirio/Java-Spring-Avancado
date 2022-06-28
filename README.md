@@ -1,4 +1,4 @@
-# Optional
+# Generics e Diamond
 ## Chega de NullPointerException! Use a nova classe Optional do Java 8
 
 Este projeto foi usado em vídeo aula gratuita para exemplificar
