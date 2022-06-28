@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b95016a7-8e44-44aa-b642-07600eff05a4" name="Changes" comment="#1OPTIONAL" />
+    <list default="true" id="b95016a7-8e44-44aa-b642-07600eff05a4" name="Changes" comment="#1OPTIONAL">
+      <change afterPath="$PROJECT_DIR$/.idea/git_toolbox_prj.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -19,6 +22,10 @@
               <option name="branches">
                 <list>
                   <RecentBranch>
+                    <option name="branchName" value="Optional" />
+                    <option name="lastUsedInstant" value="1656383122" />
+                  </RecentBranch>
+                  <RecentBranch>
                     <option name="branchName" value="OPTIONAL" />
                     <option name="lastUsedInstant" value="1656381587" />
                   </RecentBranch>
@@ -35,10 +42,11 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2BBZJIbgdUl0azQf5ZiDmTebhmX" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="foldersAlwaysOnTop" value="false" />
     <option name="showExcludedFiles" value="false" />
-    <option name="showLibraryContents" value="true" />
+    <option name="showModules" value="false" />
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
@@ -70,7 +78,14 @@
       <option name="project" value="LOCAL" />
       <updated>1656382576082</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="#1OPTIONAL">
+      <created>1656383089839</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1656383089839</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -78,19 +93,7 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="FILTERS">
-                <map>
-                  <entry key="branch">
-                    <value>
-                      <list>
-                        <option value="OPTIONAL" />
-                      </list>
-                    </value>
-                  </entry>
-                </map>
-              </option>
-            </State>
+            <State />
           </value>
         </entry>
       </map>
@@ -100,6 +103,7 @@
     <MESSAGE value="# 1 OPTIONAL" />
     <MESSAGE value="#2OPTIONAL" />
     <MESSAGE value="#3OPTIONAL" />
-    <option name="LAST_COMMIT_MESSAGE" value="#3OPTIONAL" />
+    <MESSAGE value="#1OPTIONAL" />
+    <option name="LAST_COMMIT_MESSAGE" value="#1OPTIONAL" />
   </component>
 </project>
