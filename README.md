@@ -1,4 +1,5 @@
-# Chega de NullPointerException! Use a nova classe Optional do Java 8
+# Optional
+## Chega de NullPointerException! Use a nova classe Optional do Java 8
 
 Este projeto foi usado em vídeo aula gratuita para exemplificar
 o uso do Optional do Java 8
