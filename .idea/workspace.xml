@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b95016a7-8e44-44aa-b642-07600eff05a4" name="Changes" comment="#1OPTIONAL">
-      <change afterPath="$PROJECT_DIR$/src/com/tuyofood/model/MinhaClasseGenerics.java" afterDir="false" />
+    <list default="true" id="b95016a7-8e44-44aa-b642-07600eff05a4" name="Changes" comment="#2Generics_e_Diamond">
+      <change afterPath="$PROJECT_DIR$/src/com/tuyofood/teste/MinhaClasseGenericsTeste.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,7 +82,12 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SONARLINT_PRECOMMIT_ANALYSIS" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../springRestNew" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/com/tuyofood/teste" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\REPOSITORIOS\Java-Spring-Avancado\src\com\tuyofood\teste" />
+    </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -121,7 +126,14 @@
       <option name="project" value="LOCAL" />
       <updated>1656384294125</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="#2Generics_e_Diamond">
+      <created>1656384354939</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1656384354939</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -152,6 +164,7 @@
     <MESSAGE value="#2OPTIONAL" />
     <MESSAGE value="#3OPTIONAL" />
     <MESSAGE value="#1OPTIONAL" />
-    <option name="LAST_COMMIT_MESSAGE" value="#1OPTIONAL" />
+    <MESSAGE value="#2Generics_e_Diamond" />
+    <option name="LAST_COMMIT_MESSAGE" value="#2Generics_e_Diamond" />
   </component>
 </project>
