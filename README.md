@@ -6,49 +6,50 @@
 
 ## Introdução
 #### O Java 10 introduziu o recurso de inferência de tipos para variáveis locais. Agora é possível declarar variáveis com o tipo especial "var", ao invés da definição do tipo específico, como demonstrado no exemplo a seguir:
-
+````
 var name = “Mohamed Taman”;
-Esse recurso foi implementado para aperfeiçoar a linguagem Java e estender a inferência de tipos para declarações de variáveis ​​locais com inicializadores. Isso reduz o código repetitivo, enquanto mantém a verificação dos tipos em tempo de compilação.
+````
+#### Esse recurso foi implementado para aperfeiçoar a linguagem Java e estender a inferência de tipos para declarações de variáveis ​​locais com inicializadores. Isso reduz o código repetitivo, enquanto mantém a verificação dos tipos em tempo de compilação.
 
-Como o compilador precisa inferir o tipo real do "var" olhando para a atribuição feita no lado direito (Right-Hand Side - RHS), esse recurso tem limitações em alguns casos, que será abordado mais adiante. Vejamos alguns exemplos simples agora.
+#### Como o compilador precisa inferir o tipo real do "var" olhando para a atribuição feita no lado direito (Right-Hand Side - RHS), esse recurso tem limitações em alguns casos, que será abordado mais adiante. Vejamos alguns exemplos simples agora.
 
-Para executar os exemplos escolha seu IDE favorito que suporta Java SE 10, como o Apache NetBeans 9, o IntelliJ IDEA 2018 ou o novo Eclipse.
+#### Para executar os exemplos escolha seu IDE favorito que suporta Java SE 10, como o Apache NetBeans 9, o IntelliJ IDEA 2018 ou o novo Eclipse.
 
-Pessoalmente, prefiro usar uma ferramenta de ambiente de programação interativa, para aprender rapidamente a sintaxe da linguagem Java, explorar novas APIs e seus recursos, e até para prototipar códigos complexos. Isto é, ao invés do tedioso ciclo de edição, compilação e execução de código, que normalmente envolve o seguinte processo:
+#### Pessoalmente, prefiro usar uma ferramenta de ambiente de programação interativa, para aprender rapidamente a sintaxe da linguagem Java, explorar novas APIs e seus recursos, e até para prototipar códigos complexos. Isto é, ao invés do tedioso ciclo de edição, compilação e execução de código, que normalmente envolve o seguinte processo:
 
-Escreva um programa completo;
-Compile e corrija qualquer erro;
-Execute o programa;
-Descobrir o que está errado com isso;
-Edite-o;
-Repita o processo.
-A grande novidade é a ferramenta JShell integrada e fornecida com o Java SE JDK desde o Java SE 9, que era um dos recurso principais desta versão.
+#### 1. Escreva um programa completo;
+#### 2. Compile e corrija qualquer erro;
+#### 3. Execute o programa;
+#### 4. Descobrir o que está errado com isso;
+#### 5. Edite-o;
+#### 6. Repita o processo.
+#### A grande novidade é a ferramenta JShell integrada e fornecida com o Java SE JDK desde o Java SE 9, que era um dos recurso principais desta versão.
 
-O que é JShell
+## O que é JShell
 Agora, o Java tem uma implementação de REPL (Read-Evaluate-Print-Loop) com a ferramenta JShell, também chamada de Java Shell como um ambiente de programação interativo. O JShell fornece um ambiente rápido e amigável que permite explorar, descobrir e experimentar rapidamente os recursos da linguagem Java e suas diversas bibliotecas.
 
 Usando o JShell é possível inserir elementos do programa um de cada vez, ver imediatamente o resultado e fazer ajustes conforme necessário. Portanto, o JShell substitui o tedioso ciclo de edição, compilação e execução com o loop de leitura-avaliação-impressão. Em vez de programas completos, no JShell são escritos comandos JShell e trechos de código Java.
 
 Ao inserir um trecho de código, o JShell imediatamente lê, avalia e imprime seus resultados. Em seguida, ele faz um loop para executar esse processo novamente para o próximo trecho de código. Assim, o JShell e seu feedback instantâneo mantêm sua atenção, aprimoram seu desempenho e aceleram os processos de aprendizado e desenvolvimento de software.
 
-Para a execução desse tutorial, essa introdução sobre o JShell é o suficiente, caso queira conhecer mais o InfoQ publicou uma introdução completa da ferramenta. Para aprofundar e aprender mais sobre todos os recursos do JShell, gravei um treinamento em vídeo sobre os títulos deste tópico "Hands-on Java 10 Programming with JShell [Video]" que deve ajudá-lo a dominar o tópico e pode ser acessado a partir de Packt ou Udemy.
-
+Para a execução desse tutorial, essa introdução sobre o JShell é o suficiente, caso queira conhecer mais o InfoQ publicou uma introdução completa da ferramenta.
 Agora, vamos ver alguns exemplos rápidos para entender o que pode ser feito com o tipo var usando o JShell.
 
-Software necessário
+## Software necessário
 Para trabalhar com o JShell, utilize o Java SE ou o JDK 10+ e configure para que as ferramentas que estão na pasta bin do JDK possam ser acessadas a partir de qualquer lugar do sistema.
 
-Iniciando uma sessão no JShell
+## Iniciando uma sessão no JShell
 Para iniciar uma sessão no JShell:
 
-No Microsoft Windows abra o Prompt de Comando, digite jshell e pressione Enter;
-No Linux, abra uma janela de shell, digite jshell e pressione Enter;
-No macOS (antigo OS X), abra uma janela de Terminal, digite jshell e pressione Enter.
+#### 1. No Microsoft Windows abra o Prompt de Comando, digite jshell e pressione Enter;
+#### 2. No Linux, abra uma janela de shell, digite jshell e pressione Enter;
+#### 3. No macOS (antigo OS X), abra uma janela de Terminal, digite jshell e pressione Enter.
 Esse comando executa uma nova sessão do JShell e exibe essa mensagem no prompt jshell>:
-
+````
 |  Welcome to JShell -- Version 10.0.1
 |  For an introduction type: /help intro
 jshell>
+````
 Trabalhando com o tipo "var"
 Com o JDK 10+ instalado, vejamos alguns exemplos do uso do tipo "var" no JShell. Para executar os exemplos digite cada um dos trechos no prompt do jshell. Se prestar atenção no código, parece que há algo errado, já que não há ponto-e-vírgula. Experimente e veja se funciona ou não.
 
