@@ -1,13 +1,11 @@
 # VAR do Java 10
-Pontos Principais
-O Java 10 introduziu o recurso de inferência de tipos para variáveis locais. Agora é possível declarar variáveis locais com o tipo especial "var", ao invés da definição de tipo atual;
-Esse recurso foi implementado para aperfeiçoar a linguagem Java e estender a inferência de tipos para declarações de variáveis locais com inicializadores. Isso reduz o código repetitivo, enquanto mantém a verificação dos tipos do Java em tempo de compilação;
-Como o compilador precisa inferir o tipo da "var" observando a atribuição feita no lado direito, esse recurso tem algumas limitações, como ao inicializar Arrays e Streams;
-Veja neste tutorial prático como reduzir o código padrão utilizando o novo tipo "var".
-Neste artigo, apresento por meio de exemplos, o novo recurso "var" do Java SE 10. Entenda como usá-lo corretamente em seu código e também quando não usá-lo.
+## Pontos Principais
+#### 1. O Java 10 introduziu o recurso de inferência de tipos para variáveis locais. Agora é possível declarar variáveis locais com o tipo especial "var", ao invés da definição de tipo atual;
+#### 2. Esse recurso foi implementado para aperfeiçoar a linguagem Java e estender a inferência de tipos para declarações de variáveis locais com inicializadores. Isso reduz o código repetitivo, enquanto mantém a verificação dos tipos do Java em tempo de compilação;
+#### 3. Como o compilador precisa inferir o tipo da "var" observando a atribuição feita no lado direito, esse recurso tem algumas limitações, como ao inicializar Arrays e Streams;
 
-Introdução
-O Java 10 introduziu o recurso de inferência de tipos para variáveis locais. Agora é possível declarar variáveis com o tipo especial "var", ao invés da definição do tipo específico, como demonstrado no exemplo a seguir:
+## Introdução
+#### O Java 10 introduziu o recurso de inferência de tipos para variáveis locais. Agora é possível declarar variáveis com o tipo especial "var", ao invés da definição do tipo específico, como demonstrado no exemplo a seguir:
 
 var name = “Mohamed Taman”;
 Esse recurso foi implementado para aperfeiçoar a linguagem Java e estender a inferência de tipos para declarações de variáveis ​​locais com inicializadores. Isso reduz o código repetitivo, enquanto mantém a verificação dos tipos em tempo de compilação.
