@@ -1,1 +1,1 @@
-# @FunctionalInterface
+# Interface Funcional
