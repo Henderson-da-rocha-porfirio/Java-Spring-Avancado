@@ -4,10 +4,10 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class NamoroappApplication {
+public class JavaAvancadoApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(NamoroappApplication.class, args);
+		SpringApplication.run(JavaAvancadoApplication.class, args);
 	}
 
 }
