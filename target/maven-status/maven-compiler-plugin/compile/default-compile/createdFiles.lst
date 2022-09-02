@@ -1,3 +1,7 @@
-com\tuyo\namoroapp\entities\Interesse.class
+com\tuyo\namoroapp\controllers\ContaUsuarioController.class
+com\tuyo\namoroapp\controllers\InteresseController.class
+com\tuyo\namoroapp\JavaAvancadoApplication.class
+com\tuyo\namoroapp\repositories\ContaUsuarioRepo.class
 com\tuyo\namoroapp\entities\ContaUsuario.class
-com\tuyo\namoroapp\NamoroappApplication.class
+com\tuyo\namoroapp\repositories\InteresseRepo.class
+com\tuyo\namoroapp\entities\Interesse.class
