@@ -17,3 +17,42 @@ Por causa dessas diferenças na lógica e nos requisitos, geralmente é mais cla
 
 - Uso de Bibliotecas
 Em projetos maiores, é comum usar bibliotecas como o ModelMapper ou o MapStruct para lidar com essas conversões. Essas bibliotecas podem reduzir a quantidade de código manual que você precisa escrever e fornecer uma abordagem mais consistente e configurável para a conversão entre DTOs e entidades. Isso pode ser especialmente útil se você tiver muitas conversões semelhantes a serem feitas em todo o seu projeto.
+
+
+- @Controller:
+
+> É uma anotação de nível de classe usada em componentes Spring MVC para indicar que uma classe é um controlador Spring.
+As classes anotadas com @Controller podem servir tanto HTML quanto JSON, XML ou qualquer outro tipo de resposta, dependendo de como são configuradas.
+Quando você usa @Controller, o Spring não converte automaticamente a resposta em JSON ou outro formato. É necessário adicionar explicitamente a anotação @ResponseBody no método ou usar uma biblioteca de visualização como Thymeleaf para servir páginas HTML.
+@RestController:
+
+- @RestController é uma anotação especializada que combina @Controller e @ResponseBody.
+  
+> Essa anotação é usada quando você deseja criar um serviço RESTful e a resposta será automaticamente convertida para o formato desejado (como JSON), sem a necessidade de adicionar a anotação @ResponseBody em cada método.
+Normalmente, quando você está construindo uma API RESTful que só retorna dados (não HTML), você usaria @RestController.
+
+- Exemplo usando @Controller:
+
+````
+@Controller
+public class MyController {
+    @GetMapping("/hello")
+    @ResponseBody // Isso é necessário para enviar a resposta como texto simples ou JSON
+    public String sayHello() {
+        return "Hello, World!";
+    }
+}
+````
+- Exemplo usando @RestController:
+
+````
+@RestController
+public class MyRestController {
+    @GetMapping("/hello")
+    public String sayHello() {
+        return "Hello, World!"; // JSON ou texto simples, sem necessidade de @ResponseBody
+    }
+}
+````
+
+- Em resumo, use @Controller se você estiver lidando com páginas da web e visões, e use @RestController se estiver construindo uma API RESTful onde as respostas são normalmente em JSON ou outro formato de dados.
