@@ -59,3 +59,8 @@ public class MyRestController {
 
  - Por que usar @Transactional?
 > A anotação @Transactional é usada para garantir que uma série de operações de banco de dados seja tratada como uma única transação. Se alguma das operações falhar, a transação inteira é revertida, garantindo a integridade dos dados. É útil quando você tem várias operações que precisam ser todas bem-sucedidas, ou nenhuma delas. No caso de salvar várias entidades relacionadas, você pode querer que todas sejam salvas com sucesso ou que nenhuma seja salva, para evitar um estado inconsistente no banco de dados.
+
+Métodos HTTP:
+
+* GET: Você está criando o DTO com base em dados recuperados (por exemplo, do banco de dados). Você chama explicitamente os métodos set para preencher os campos.
+* POST: Você está recebendo o DTO como parte da solicitação HTTP. O Spring chama os métodos set para você, com base no corpo da solicitação. Você não precisa chamar os métodos set explicitamente.
