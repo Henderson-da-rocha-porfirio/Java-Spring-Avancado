@@ -56,3 +56,6 @@ public class MyRestController {
 ````
 
 - Em resumo, use @Controller se você estiver lidando com páginas da web e visões, e use @RestController se estiver construindo uma API RESTful onde as respostas são normalmente em JSON ou outro formato de dados.
+
+ - Por que usar @Transactional?
+> A anotação @Transactional é usada para garantir que uma série de operações de banco de dados seja tratada como uma única transação. Se alguma das operações falhar, a transação inteira é revertida, garantindo a integridade dos dados. É útil quando você tem várias operações que precisam ser todas bem-sucedidas, ou nenhuma delas. No caso de salvar várias entidades relacionadas, você pode querer que todas sejam salvas com sucesso ou que nenhuma seja salva, para evitar um estado inconsistente no banco de dados.
