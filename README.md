@@ -131,3 +131,10 @@ public ResponseEntity<?> salvarConfiguracao(@Valid @RequestBody ConfiguracaoAgen
     // ... lógica do controlador
 }
 ````
+
+### 4. Método vs Assinatura
+ - Método: É um conjunto de instruções que fazem uma tarefa particular e podem retornar um valor. No seu caso, salvarConfiguracao é um método.
+
+- Assinatura do Método: É uma parte do método que inclui o nome do método e a lista de parâmetros. Ele não inclui o corpo do método (código dentro das chaves {}). Por exemplo, a assinatura do método salvarConfiguration seria public ConfigurationAgendaDto salvarConfiguration(ConfigurationAgendaPostDto configurationPostDto).
+
+🚀🚨😉
