@@ -60,6 +60,85 @@ public class MyRestController {
 ## Por que usar @Transactional?
 > A anotação @Transactional é usada para garantir que uma série de operações de banco de dados seja tratada como uma única transação. Se alguma das operações falhar, a transação inteira é revertida, garantindo a integridade dos dados. É útil quando você tem várias operações que precisam ser todas bem-sucedidas, ou nenhuma delas. No caso de salvar várias entidades relacionadas, você pode querer que todas sejam salvas com sucesso ou que nenhuma seja salva, para evitar um estado inconsistente no banco de dados.
 
+Em uma aplicação Spring, o gerenciamento de transações é uma parte crucial para garantir que as operações no banco de dados sejam realizadas de forma segura e consistente. Vou te mostrar como as transações funcionam usando a anotação `@Transactional` e, em seguida, como lidar com transações programáticas com `TransactionTemplate`.
+
+### 1. **Uso da anotação `@Transactional`**
+Essa é a forma mais comum e recomendada de gerenciar transações no Spring. Você pode simplesmente anotar métodos (ou classes inteiras) com `@Transactional` para que o Spring abra, faça commit ou dê rollback automaticamente nas transações.
+
+#### Exemplo:
+
+```java
+@Service
+public class ProdutoService {
+
+    @Autowired
+    private ProdutoRepository produtoRepository;
+
+    // Método transacional: se ocorrer uma exceção, o Spring dará rollback na transação
+    @Transactional
+    public void salvarProduto(Produto produto) {
+        produtoRepository.save(produto);
+        // Se houver alguma exceção aqui, o Spring reverterá a transação automaticamente
+    }
+}
+```
+
+- **Quando usar:** Quando você quer que o Spring gerencie automaticamente o início e fim da transação, e você tem um comportamento previsível de commit ou rollback.
+
+- **Benefícios:** O Spring cuida de toda a complexidade. Caso uma exceção ocorra, a transação será revertida.
+
+### 2. **Transações Programáticas com `TransactionTemplate`**
+
+Em alguns casos mais complexos, você pode precisar de um controle mais refinado sobre o que acontece dentro da transação, como, por exemplo, controlar múltiplas transações dentro do mesmo método. Para isso, você pode usar `TransactionTemplate`, que permite manipular transações programaticamente.
+
+#### Exemplo:
+
+```java
+@Service
+public class ProdutoService {
+
+    private final TransactionTemplate transactionTemplate;
+
+    @Autowired
+    public ProdutoService(TransactionTemplate transactionTemplate) {
+        this.transactionTemplate = transactionTemplate;
+    }
+
+    public void salvarComTransacaoProgramatica(Produto produto) {
+        // Usando TransactionTemplate para controlar transação manualmente
+        transactionTemplate.execute(status -> {
+            try {
+                // Código transacional
+                produtoRepository.save(produto);
+                
+                // Simulação de um erro
+                if (produto.getNome() == null) {
+                    throw new RuntimeException("Erro: nome do produto não pode ser nulo");
+                }
+
+                // Commit da transação é automático após a execução sem erros
+                return null; // Pode retornar um valor se necessário
+            } catch (Exception ex) {
+                // Rolando back manualmente em caso de exceção
+                status.setRollbackOnly();
+                throw ex;
+            }
+        });
+    }
+}
+```
+
+- **Quando usar:** Quando você precisa de um controle maior sobre o fluxo da transação, como cenários onde múltiplas transações ocorrem ou há uma necessidade específica de gerenciar o commit/rollback manualmente.
+
+- **Benefícios:** Maior flexibilidade, mas com um pouco mais de complexidade no código.
+
+### Comparação
+
+- **Anotação `@Transactional`:** Simples, ideal para a maioria dos casos.
+- **`TransactionTemplate`:** Útil para cenários mais complexos onde o controle manual das transações é necessário.
+
+Ambas as abordagens são poderosas, e o Spring oferece suporte robusto para ambas! 🎯
+
 ## Métodos HTTP:
 
 * GET: Você está criando o DTO com base em dados recuperados (por exemplo, do banco de dados). Você chama explicitamente os métodos set para preencher os campos.
